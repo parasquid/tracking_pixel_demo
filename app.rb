@@ -7,7 +7,8 @@ get "/" do
 end
 
 get "/pixel.png" do
-  puts JSON.pretty_generate(request.cookies)
+  puts "query string: #{request.query_string}"
+  puts "cookies: #{JSON.pretty_generate(request.cookies)}"
 
   # this renders the actual 1x1 transparent pixel (hence the name pixel tracker)
   content_type "image/png"
