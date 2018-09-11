@@ -1,3 +1,17 @@
-<h1>Hello World!</h1>
-<img src="/pixel.png?price=9001" />
-<iframe src="/iframe?price=1009" style="display: none"/>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/1.8.1/fingerprint2.min.js"></script>
+</head>
+<body>
+  <h1>Hello World!</h1>
+
+  <img src="/pixel.png?price=9001" />
+
+  <iframe src="/iframe?price=1009" style="display: none"></iframe>
+
+  <script>
+    new Fingerprint2().get(function(result, components) {
+      console.log("fingerprint:", result) // a hash, representing your device fingerprint
+    })
+  </script>
+</html>

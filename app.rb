@@ -13,7 +13,8 @@ get "/pixel.png" do
 
   # this renders the actual 1x1 transparent pixel (hence the name pixel tracker)
   content_type "image/png"
-  Base64.decode64("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==")
+  pixel_base64 = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
+  Base64.decode64(pixel_base64)
 end
 
 # this is an iframe tracker which is more flexible, but requires the browser to execute js
